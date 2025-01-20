@@ -13,5 +13,10 @@ public class Mainmenuu : MonoBehaviour
         Application.Quit();
         
     }
+    public void LVLSc()
+    {
+         SceneManager.LoadSceneAsync(4);
+
+    }
 }
 
