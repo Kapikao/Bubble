@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 219147087}
   - component: {fileID: 219147086}
   - component: {fileID: 219147090}
+  - component: {fileID: 219147091}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -179,7 +180,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -308,6 +309,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &219147091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219147085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee386ff565ad374409eafe56ffc28058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bluePortalPrefab: {fileID: 7329938628850409676, guid: 783f157c298b31a4bbb1b558e5d488b5, type: 3}
+  greenPortalPrefab: {fileID: 1879869648713178831, guid: 37dba8f32008769409c6f0d4a2180a67, type: 3}
+  spawnBlueKey: 323
+  spawnGreenKey: 324
 --- !u!1 &764579476
 GameObject:
   m_ObjectHideFlags: 0
