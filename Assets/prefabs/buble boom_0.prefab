@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7390855463187838057}
   - component: {fileID: 2923064057113954350}
   - component: {fileID: 3547141283097637830}
+  - component: {fileID: 6679572872256439591}
   m_Layer: 0
   m_Name: buble boom_0
   m_TagString: Untagged
@@ -104,3 +105,19 @@ MonoBehaviour:
   detectionRadius: 3
   timeToBurst: 2
   particleEffectPrefab: {fileID: 7121175436145039839, guid: a6787b828e75c224abaa86b4289fa2d3, type: 3}
+--- !u!114 &6679572872256439591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042375860482552933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e10529d70d05b4cbe4970d07380303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 5
+  attackRange: 1
+  damage: 75
+  attackCooldown: 2
