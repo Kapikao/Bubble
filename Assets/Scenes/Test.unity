@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 499121066}
   - component: {fileID: 499121068}
   - component: {fileID: 499121067}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "t\u0142o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21057,7 +21057,7 @@ GameObject:
   - component: {fileID: 764579479}
   - component: {fileID: 764579478}
   - component: {fileID: 764579477}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: Square
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -21777,7 +21777,7 @@ GameObject:
   - component: {fileID: 1518000710}
   - component: {fileID: 1518000709}
   - component: {fileID: 1518000711}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: teren
   m_TagString: Untagged
   m_Icon: {fileID: 0}
