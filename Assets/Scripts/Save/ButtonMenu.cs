@@ -11,57 +11,55 @@ public class ButtonMenu : MonoBehaviour
     public GameObject ACT7;
     public GameObject ACT8;
     public GameObject end;
-    public int lvlcount;
-    
-    void Start()
+    public int lvlcount = 1;
+
+    public void LevelComplete()
     {
-        lvlcount = 8;
-        
+        lvlcount += 1;
+
+        // Update is called once per frame
+        void start()
+        {
+
+
+            if (lvlcount == 1)
+            {
+                lvl2();
+            }
+            else if (lvlcount == 2)
+            {
+                lvl3();
+            }
+            else if (lvlcount == 3)
+            {
+                lvl4();
+            }
+            else if (lvlcount == 4)
+            {
+                lvl5();
+            }
+            else if (lvlcount == 5)
+            {
+                lvl6();
+            }
+            else if (lvlcount == 6)
+            {
+                lvl7();
+            }
+            else if (lvlcount == 7)
+            {
+                lvl8();
+            }
+            else if (lvlcount == 8)
+            {
+                lvl9();
+            }
+            else
+            {
+                nonelvl();
+            }
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-        if (lvlcount == 1)
-        {
-            lvl2();
-        }
-        else if (lvlcount == 2)
-        {
-            lvl3();
-        }
-        else if (lvlcount == 3)
-        {
-            lvl4(); 
-        }
-        else if (lvlcount == 4)
-        {
-            lvl5(); 
-        }
-        else if (lvlcount == 5)
-        {
-            lvl6();
-        }
-        else if (lvlcount == 6)
-        {
-            lvl7();
-        }
-        else if (lvlcount == 7)
-        {
-            lvl8();
-        }
-        else if (lvlcount == 8)
-        {
-            lvl9();
-        }
-        else
-        {
-            nonelvl();
-        }
-    }
-
     public void lvl2()
     {
         ACT2.SetActive(true);
@@ -169,4 +167,3 @@ public class ButtonMenu : MonoBehaviour
         end.SetActive(false);
     }
 }
-

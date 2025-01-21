@@ -19,9 +19,6 @@ public class TiltAndColor : MonoBehaviour
         // Nachylenie obiektu na podstawie ruchu myszy
         float tiltX = Input.GetAxis("Mouse X") * tiltSpeed;
         float tiltY = Input.GetAxis("Mouse Y") * tiltSpeed;
-
-        // Zastosuj nachylenie do obiektu
-        transform.rotation = Quaternion.Euler(tiltY, tiltX, 0f);
     }
 
     // Funkcja do generowania unikalnego losowego koloru

@@ -1,18 +1,41 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 
-public class Bubble : MonoBehaviour
+public class bublebomb : MonoBehaviour
 {
     public GameObject player; // Przypisz obiekt gracza w edytorze Unity
-    public float detectionRadius = 2f; // Promieñ wykrywania gracza
-    public float timeToBurst = 2f; // Czas, jaki gracz musi spêdziæ w pobli¿u, aby bañka pêk³a
-    public GameObject particleEffectPrefab; // Prefab efektu cz¹steczek
+    public float detectionRadius = 2f; // PromieÃ± wykrywania gracza
+    public float timeToBurst = 2f; // Czas, jaki gracz musi spÃªdziÃ¦ w pobliÂ¿u, aby baÃ±ka pÃªkÂ³a
+    public GameObject particleEffectPrefab; // Prefab efektu czÂ¹steczek
 
-    private float timeInProximity = 0f; // Licznik czasu spêdzonego w pobli¿u
+    public float attackRange = 5f;
+    public int damage = 75;
+    public float attackCooldown = 2f;
+    private float nextAttackTime = 0f;
+
+
+
+    private float timeInProximity = 0f; // Licznik czasu spÃªdzonego w pobliÂ¿u
     private bool isPlayerNearby = false;
+
+    [Header("Gracz")]
+    private PlayerHealth playerHealth; // Komponent zdrowia gracza
 
     void Start()
     {
+        {
+        // ZnajdÅ¸ gracza na podstawie tagu
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            playerHealth = playerObject.GetComponent<PlayerHealth>();
+        }
+        else
+        {
+            Debug.LogError("Nie znaleziono gracza z tagiem 'Player'.");
+        }
+    }
+
         // Automatyczne przypisanie obiektu gracza na podstawie tagu
         if (player == null)
         {
@@ -20,31 +43,31 @@ public class Bubble : MonoBehaviour
 
             if (player == null)
             {
-                Debug.LogError("Nie znaleziono obiektu gracza! Upewnij siê, ¿e gracz ma tag 'Player'.");
+                Debug.LogError("Nie znaleziono obiektu gracza! Upewnij siÃª, Â¿e gracz ma tag 'Player'.");
             }
         }
     }
 
     void Update()
     {
-        if (player == null) return; // WyjdŸ z Update, jeœli player nie zosta³ znaleziony
+        if (player == null) return; // WyjdÅ¸ z Update, jeÅ“li player nie zostaÂ³ znaleziony
 
-        // Oblicz odleg³oœæ miêdzy graczem a bañk¹
+        // Oblicz odlegÂ³oÅ“Ã¦ miÃªdzy graczem a baÃ±kÂ¹
         float distance = Vector3.Distance(player.transform.position, transform.position);
 
-        // SprawdŸ, czy gracz jest w promieniu wykrywania
+        // SprawdÅ¸, czy gracz jest w promieniu wykrywania
         if (distance <= detectionRadius)
         {
             if (!isPlayerNearby)
             {
-                isPlayerNearby = true; // Gracz wszed³ w zasiêg
-                Debug.Log("Gracz jest w pobli¿u bañki.");
+                isPlayerNearby = true; // Gracz wszedÂ³ w zasiÃªg
+                Debug.Log("Gracz jest w pobliÂ¿u baÃ±ki.");
             }
 
-            // Zwiêksz licznik czasu
+            // ZwiÃªksz licznik czasu
             timeInProximity += Time.deltaTime;
 
-            // Jeœli czas w pobli¿u przekroczy okreœlony czas, bañka pêka
+            // JeÅ“li czas w pobliÂ¿u przekroczy okreÅ“lony czas, baÃ±ka pÃªka
             if (timeInProximity >= timeToBurst)
             {
                 BurstBubble();
@@ -52,33 +75,44 @@ public class Bubble : MonoBehaviour
         }
         else
         {
-            // Resetuj licznik, jeœli gracz opuœci zasiêg
+            // Resetuj licznik, jeÅ“li gracz opuÅ“ci zasiÃªg
             if (isPlayerNearby)
             {
-                isPlayerNearby = false; // Gracz opuœci³ zasiêg
-                Debug.Log("Gracz opuœci³ pobli¿e bañki.");
+                isPlayerNearby = false; // Gracz opuÅ“ciÂ³ zasiÃªg
+                Debug.Log("Gracz opuÅ“ciÂ³ pobliÂ¿e baÃ±ki.");
             }
             timeInProximity = 0f;
         }
     }
 
-    void BurstBubble()
+    public void BurstBubble()
     {
-        Debug.Log("Bañka pêk³a!");
+        Debug.Log("BaÃ±ka pÃªkÂ³a!");
 
-        // Tworzenie efektu cz¹steczek, jeœli prefab jest przypisany
+        AttackPlayer();
+
+        // Tworzenie efektu czÂ¹steczek, jeÅ“li prefab jest przypisany
         if (particleEffectPrefab != null)
         {
             GameObject particleEffect = Instantiate(particleEffectPrefab, transform.position, Quaternion.identity);
             Destroy(particleEffect, 2f); // Usuwa prefab efektu po 2 sekundach
         }
 
-        Destroy(gameObject); // Zniszcz obiekt bañki
+        Destroy(gameObject); // Zniszcz obiekt baÃ±ki
+    }
+    private void AttackPlayer()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damage);
+            Debug.Log("Przeciwnik zadaÂ³ graczowi " + damage + " obraÂ¿eÃ±!");
+            nextAttackTime = Time.time + attackCooldown; // Ustaw cooldown
+        }
     }
 
     void OnDrawGizmosSelected()
     {
-        // Rysuj promieñ wykrywania w edytorze Unity
+        // Rysuj promieÃ± wykrywania w edytorze Unity
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }

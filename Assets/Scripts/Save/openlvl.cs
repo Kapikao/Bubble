@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -61,4 +62,9 @@ public class openlvl : MonoBehaviour
         SceneManager.LoadSceneAsync(12);
 
     }
+    public void LvUp(int lvlcount)
+    {
+        lvlcount += 1;
+    }
+
 }
