@@ -14,8 +14,9 @@ public class Mainmenuu : MonoBehaviour
    }
   public void QuitGame()
     {
+        Debug.Log("Quitting game...");
         Application.Quit();
-        
+
     }
     public void LVLSc()
     {
