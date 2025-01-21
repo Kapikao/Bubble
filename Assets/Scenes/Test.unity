@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 499121066}
   - component: {fileID: 499121068}
   - component: {fileID: 499121067}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "t\u0142o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ Transform:
   m_GameObject: {fileID: 499121065}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21057,7 +21057,7 @@ GameObject:
   - component: {fileID: 764579479}
   - component: {fileID: 764579478}
   - component: {fileID: 764579477}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: Square
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -21772,7 +21772,7 @@ GameObject:
   - component: {fileID: 1518000710}
   - component: {fileID: 1518000709}
   - component: {fileID: 1518000711}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: teren
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21788,7 +21788,7 @@ Transform:
   m_GameObject: {fileID: 1518000707}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23822,11 +23822,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390855463187838057, guid: c3c5798638e17434f93f4034af076587, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.048145
+      value: 9.96
       objectReference: {fileID: 0}
     - target: {fileID: 7390855463187838057, guid: c3c5798638e17434f93f4034af076587, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4504495
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: 7390855463187838057, guid: c3c5798638e17434f93f4034af076587, type: 3}
       propertyPath: m_LocalPosition.z
