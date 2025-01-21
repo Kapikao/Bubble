@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2347151989659728107}
   - component: {fileID: 4505764436519536709}
   - component: {fileID: 6837580932154003254}
+  - component: {fileID: 4434514720521780431}
   m_Layer: 0
   m_Name: bubble_0
   m_TagString: Untagged
@@ -152,3 +153,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4434514720521780431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046813615786195372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c02c37b3aed4f34a8019ec8c19d022a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltSpeed: 20
