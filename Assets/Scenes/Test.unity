@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 75946680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21466,7 +21466,7 @@ Transform:
   m_GameObject: {fileID: 1258513768}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21689,12 +21689,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc99ed1c80f8a1d4cbe3d3c24796fea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  EnemyHealth: 0
   patrolPoints:
   - {fileID: 1758668596}
   - {fileID: 1280305222}
   patrolSpeed: 2
   detectionRange: 5
-  attackRange: 1
+  attackRange: 3
   damage: 25
   attackCooldown: 2
 --- !u!212 &1392132152
@@ -24006,6 +24008,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 686518819969506763, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 686518819969506763, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.17
+      objectReference: {fileID: 0}
     - target: {fileID: 1931776826471530254, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
       propertyPath: healthBar
       value: 
@@ -24015,12 +24025,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 996150507}
     - target: {fileID: 4068196732516589630, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068196732516589630, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068196732516589630, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4068196732516589630, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4068196732516589630, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
       propertyPath: m_LocalPosition.z

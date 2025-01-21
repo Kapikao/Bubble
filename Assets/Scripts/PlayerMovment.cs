@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
     private float horizontal;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
@@ -32,6 +33,17 @@ public class PlayerMovement : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        // Ustawienie parametru "Speed" w animatorze
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+
+        // Ustawienie kierunku chodzenia
+        animator.SetBool("IsWalkingBackwards", horizontalInput < 0);
+
+        // Ruch postaci
+        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
+
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if (IsGrounded())
