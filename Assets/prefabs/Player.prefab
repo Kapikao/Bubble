@@ -637,7 +637,7 @@ MonoBehaviour:
   groundCheck: {fileID: 686518819969506763}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 2048
   dashSpeed: 20
   dashDuration: 0.2
   dashCooldown: 1
