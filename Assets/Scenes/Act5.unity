@@ -377,6 +377,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6577236359287085454, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577236359287085454, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8694627052697628274, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
       propertyPath: m_Name
       value: Player
