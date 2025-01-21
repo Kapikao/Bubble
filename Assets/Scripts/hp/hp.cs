@@ -48,6 +48,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Gracz umar³! Resetowanie sceny...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // £aduje ponownie scenê
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(3); 
     }
 }
