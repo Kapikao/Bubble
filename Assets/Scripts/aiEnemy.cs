@@ -1,26 +1,28 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour
 {
-    [Header("Patrolowanie")]
-    public Transform[] patrolPoints; // Punkty, miêdzy którymi przeciwnik patroluje
-    private int currentPatrolIndex = 0; // Aktualny punkt patrolowy
-    public float patrolSpeed = 2f; // Prêdkoœæ patrolowania
+    public float maxHealth = 100f; //HP
+    public float EnemyHealth;
 
-    [Header("Atakowanie Gracza")]
-    public float detectionRange = 5f; // Zasiêg wykrywania gracza
-    public float attackRange = 1f; // Zasiêg ataku
-    public int damage = 3; // Iloœæ obra¿eñ zadawanych graczowi
-    public float attackCooldown = 2f; // Cooldown ataku
-    private float nextAttackTime = 0f; // Czas nastêpnego ataku
+    public Transform[] patrolPoints; //Patrolowanie
+    private int currentPatrolIndex = 0;
+    public float patrolSpeed = 2f;
 
-    [Header("Gracz")]
-    private Transform player; // Referencja do gracza
-    private PlayerHealth playerHealth; // Komponent zdrowia gracza
+    public float detectionRange = 5f; // atak
+    public float attackRange = 1f;
+    public int damage = 3;
+    public float attackCooldown = 2f;
+    private float nextAttackTime = 0f;
+
+    private Transform player; //player info
+    private PlayerHealth playerHealth;
 
     private void Start()
     {
-        // ZnajdŸ gracza na podstawie tagu
+        EnemyHealth = maxHealth;
+
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
@@ -35,11 +37,16 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+            if (EnemyHealth <= 0)
+            {
+                Die();
+            }
+
         if (player == null) return;
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= detectionRange) // Gracz w zasiêgu
+        if (distanceToPlayer <= detectionRange)
         {
             FollowPlayer();
         }
@@ -56,20 +63,17 @@ public class EnemyAI : MonoBehaviour
 
     private void Patrol()
     {
-        // Ruch do aktualnego punktu patrolowego
         Transform targetPoint = patrolPoints[currentPatrolIndex];
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, patrolSpeed * Time.deltaTime);
 
-        // Sprawdzenie, czy przeciwnik dotar³ do punktu patrolowego
         if (Vector3.Distance(transform.position, targetPoint.position) < 0.2f)
         {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length; // Przejœcie do nastêpnego punktu
+            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
         }
     }
 
     private void FollowPlayer()
     {
-        // Pod¹¿anie za graczem
         transform.position = Vector3.MoveTowards(transform.position, player.position, patrolSpeed * Time.deltaTime);
     }
 
@@ -79,7 +83,15 @@ public class EnemyAI : MonoBehaviour
         {
             playerHealth.TakeDamage(damage);
             Debug.Log("Przeciwnik zada³ graczowi " + damage + " obra¿eñ!");
-            nextAttackTime = Time.time + attackCooldown; // Ustaw cooldown
+            nextAttackTime = Time.time + attackCooldown;
         }
+    }
+    public void EnemyTakeDamage(float damage)
+    {
+        EnemyHealth -= damage;
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }
