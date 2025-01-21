@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    [SerializeField] private AudioSource footstepAudio; // Dodano AudioSource dla dźwięków kroków
+
     [SerializeField] private float dashSpeed = 20f;
     [SerializeField] private float dashDuration = 0.2f;
     [SerializeField] private float dashCooldown = 1f;
@@ -21,14 +23,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.2f;
     private float coyoteTimeCounter = 0f;
 
-    // Nowe zmienne na mechanik� zwi�kszonej grawitacji
-    [SerializeField] private float increasedGravity = 10f; // Zwi�kszona grawitacja podczas naci�ni�cia 'S'
+    [SerializeField] private float increasedGravity = 10f; // Zwiększona grawitacja podczas naciśnięcia 'S'
     [SerializeField] private float normalGravity = 3f; // Normalna grawitacja
     private bool isPressingS = false;
 
     private bool canDoubleJump = false;
 
-    [SerializeField] private float maxSpeed = 10f; // Maksymalna pr�dko�� gracza (ca�kowita pr�dko�� wektora)
+    [SerializeField] private float maxSpeed = 10f; // Maksymalna prędkość gracza (całkowita prędkość wektora)
+
+    private bool isWalking = false; // Flaga do kontrolowania dźwięków kroków
 
     [System.Obsolete]
     void Update()
@@ -46,10 +49,24 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        if (horizontal != 0f && IsGrounded()) // Jeśli postać się porusza i jest na ziemi
+        {
+            if (!isWalking) // Jeśli dźwięk kroków nie jest już odtwarzany
+            {
+                footstepAudio.Play(); // Odtwórz dźwięk kroków
+                isWalking = true;
+            }
+        }
+        else // Jeśli postać się nie porusza lub jest w powietrzu
+        {
+            footstepAudio.Stop(); // Zatrzymaj dźwięk kroków
+            isWalking = false;
+        }
+
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
-            canDoubleJump = true;  // Mo�emy wykona� podw�jny skok, gdy jeste�my na ziemi
+            canDoubleJump = true;  // Możemy wykonać podwójny skok, gdy jesteśmy na ziemi
         }
         else
         {
@@ -58,19 +75,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0f)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             coyoteTimeCounter = 0f;
-            canDoubleJump = true;  // Mo�emy wykona� podw�jny skok po pierwszym skoku
+            canDoubleJump = true;  // Możemy wykonać podwójny skok po pierwszym skoku
         }
         else if (Input.GetButtonDown("Jump") && !IsGrounded() && canDoubleJump)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower); // Podw�jny skok
-            canDoubleJump = false;  // Tylko jeden podw�jny skok
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower); // Podwójny skok
+            canDoubleJump = false;  // Tylko jeden podwójny skok
         }
 
-        if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTimer <= 0f)
@@ -92,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
     [System.Obsolete]
     void FixedUpdate()
     {
-        // Zmiana grawitacji w zale�no�ci od tego, czy trzymamy "S"
+        // Zmiana grawitacji w zależności od tego, czy trzymamy "S"
         if (isPressingS)
         {
             rb.gravityScale = increasedGravity;
@@ -104,22 +121,22 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isDashing)
         {
-            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
 
-        // Ograniczenie maksymalnej ca�kowitej pr�dko�ci (wektorowej)
+        // Ograniczenie maksymalnej całkowitej prędkości (wektorowej)
         LimitVelocity();
     }
 
     private void LimitVelocity()
     {
-        // Oblicz aktualn� ca�kowit� pr�dko�� (modu� wektora pr�dko�ci)
-        float currentSpeed = rb.linearVelocity.magnitude;
+        // Oblicz aktualną całkowitą prędkość (moduł wektora prędkości)
+        float currentSpeed = rb.velocity.magnitude;
 
         if (currentSpeed > maxSpeed)
         {
-            // Ogranicz pr�dko��, zachowuj�c kierunek ruchu
-            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+            // Ogranicz prędkość, zachowując kierunek ruchu
+            rb.velocity = rb.velocity.normalized * maxSpeed;
         }
     }
 
@@ -149,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 0f;
 
         float dashDirection = isFacingRight ? 1f : -1f;
-        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
+        rb.velocity = new Vector2(dashDirection * dashSpeed, 0f);
 
         yield return new WaitForSeconds(dashDuration);
 
