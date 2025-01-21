@@ -21316,6 +21316,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423cd2c7d6824044d806cb5593218030, type: 3}
+--- !u!1 &996150507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3582565925883557484, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+  m_PrefabInstance: {fileID: 6146816687379781958}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1100773215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23822,11 +23827,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390855463187838057, guid: c3c5798638e17434f93f4034af076587, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.048145
+      value: 9.56
       objectReference: {fileID: 0}
     - target: {fileID: 7390855463187838057, guid: c3c5798638e17434f93f4034af076587, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4504495
+      value: 5.39
       objectReference: {fileID: 0}
     - target: {fileID: 7390855463187838057, guid: c3c5798638e17434f93f4034af076587, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23939,6 +23944,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1808140038}
+    - target: {fileID: 1931776826471530254, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: deatheffect
+      value: 
+      objectReference: {fileID: 996150507}
     - target: {fileID: 4068196732516589630, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
