@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: add128bdf10611b44a0e1f2823a3d9ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2834154723085639895
+    second: hudapidaska_0
+  - first:
+      213: -7776717142637172494
+    second: hudapidaska_1
+  - first:
+      213: -1859408171693118756
+    second: hudapidaska_2
+  - first:
+      213: 5438490510646520546
+    second: hudapidaska_3
+  - first:
+      213: -1716568167469956784
+    second: hudapidaska_4
+  - first:
+      213: 6774957367561449136
+    second: hudapidaska_5
+  - first:
+      213: -813650354890733155
+    second: hudapidaska_6
+  - first:
+      213: 6268614939541517627
+    second: hudapidaska_7
+  - first:
+      213: -3126143618801045663
+    second: hudapidaska_8
+  - first:
+      213: 8758604407076332994
+    second: hudapidaska_9
+  - first:
+      213: 3924325641918295455
+    second: hudapidaska_10
+  - first:
+      213: 3612044801784117822
+    second: hudapidaska_11
+  - first:
+      213: 2776233284905535911
+    second: hudapidaska_12
+  - first:
+      213: 348395368815033749
+    second: hudapidaska_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hudapidaska_0
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1255
+        width: 728
+        height: 875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f1cfb9b4f0ba8d0800000000000000
+      internalID: -2834154723085639895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_1
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 1403
+        width: 541
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8ab6a26fc831490800000000000000
+      internalID: -7776717142637172494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_2
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1981
+        width: 442
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdae5c19e1e0236e0800000000000000
+      internalID: -1859408171693118756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_3
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 1425
+        width: 403
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea2b691e46697b40800000000000000
+      internalID: 5438490510646520546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_4
+      rect:
+        serializedVersion: 2
+        x: 3858
+        y: 1880
+        width: 78
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051c531b8568d28e0800000000000000
+      internalID: -1716568167469956784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_5
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1255
+        width: 322
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be6aed94db750e50800000000000000
+      internalID: 6774957367561449136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_6
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 1416
+        width: 278
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d990e59205555b4f0800000000000000
+      internalID: -813650354890733155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_7
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 1424
+        width: 290
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35341133189ef650800000000000000
+      internalID: 6268614939541517627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_8
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1416
+        width: 208
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f628411f4bd94d0800000000000000
+      internalID: -3126143618801045663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_9
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 1416
+        width: 290
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5a4fb9d40dc8970800000000000000
+      internalID: 8758604407076332994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_10
+      rect:
+        serializedVersion: 2
+        x: 3867
+        y: 1424
+        width: 59
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d2f7d1161067630800000000000000
+      internalID: 3924325641918295455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_11
+      rect:
+        serializedVersion: 2
+        x: 4009
+        y: 1416
+        width: 343
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a732b1c9f802230800000000000000
+      internalID: 3612044801784117822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_12
+      rect:
+        serializedVersion: 2
+        x: 4414
+        y: 1416
+        width: 231
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a90968a679278620800000000000000
+      internalID: 2776233284905535911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hudapidaska_13
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 1386
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d7c97fdbfb5d400800000000000000
+      internalID: 348395368815033749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      hudapidaska_0: -2834154723085639895
+      hudapidaska_1: -7776717142637172494
+      hudapidaska_10: 3924325641918295455
+      hudapidaska_11: 3612044801784117822
+      hudapidaska_12: 2776233284905535911
+      hudapidaska_13: 348395368815033749
+      hudapidaska_2: -1859408171693118756
+      hudapidaska_3: 5438490510646520546
+      hudapidaska_4: -1716568167469956784
+      hudapidaska_5: 6774957367561449136
+      hudapidaska_6: -813650354890733155
+      hudapidaska_7: 6268614939541517627
+      hudapidaska_8: -3126143618801045663
+      hudapidaska_9: 8758604407076332994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
