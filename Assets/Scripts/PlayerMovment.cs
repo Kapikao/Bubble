@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDoubleJump = false;
 
+    [SerializeField] private float maxSpeed = 10f; // Maksymalna prêdkoœæ gracza (ca³kowita prêdkoœæ wektora)
+
     [System.Obsolete]
     void Update()
     {
@@ -92,14 +94,26 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
+
+        // Ograniczenie maksymalnej ca³kowitej prêdkoœci (wektorowej)
+        LimitVelocity();
+    }
+
+    private void LimitVelocity()
+    {
+        // Oblicz aktualn¹ ca³kowit¹ prêdkoœæ (modu³ wektora prêdkoœci)
+        float currentSpeed = rb.velocity.magnitude;
+
+        if (currentSpeed > maxSpeed)
+        {
+            // Ogranicz prêdkoœæ, zachowuj¹c kierunek ruchu
+            rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
     }
 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-        
-        
-
     }
 
     private void Flip()

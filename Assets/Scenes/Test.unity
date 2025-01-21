@@ -162,7 +162,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 14.221005
+    OrthographicSize: 7.9
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -768,7 +768,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14.221005
+  orthographic size: 7.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1480,13 +1480,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6577236359287085454, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577236359287085454, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 2.5
+    - target: {fileID: 6022553811195494371, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
+      propertyPath: maxSpeed
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8694627052697628274, guid: 710c91dea7bd3aa4e8baacedda2ac7f8, type: 3}
       propertyPath: m_Name
