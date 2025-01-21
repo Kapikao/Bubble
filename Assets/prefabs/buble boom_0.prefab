@@ -102,9 +102,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  detectionRadius: 3
+  detectionRadius: 7
   timeToBurst: 2
   particleEffectPrefab: {fileID: 7121175436145039839, guid: a6787b828e75c224abaa86b4289fa2d3, type: 3}
+  attackRange: 5
+  damage: 75
+  attackCooldown: 2
 --- !u!114 &6679572872256439591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e10529d70d05b4cbe4970d07380303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
   attackRange: 1
   damage: 75
   attackCooldown: 2
