@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
+    public GameObject deatheffect;
 
     public HealthBar healthBar;
 
@@ -30,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Gracz umarł! Resetowanie sceny...");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        deatheffect.SetActive(true);
         SceneManager.LoadSceneAsync(3);
+
     }
 }
