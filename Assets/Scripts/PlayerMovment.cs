@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
+
     private float horizontal;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
@@ -31,36 +32,35 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float maxSpeed = 10f; // Maksymalna prędkość gracza (całkowita prędkość wektora)
 
-    private bool isWalking = false; // Flaga do kontrolowania dźwięków kroków
+    private bool isMoving = false; // Flaga do kontrolowania dźwięków kroków
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     [System.Obsolete]
     void Update()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        // Ustawienie parametru "Speed" w animatorze
-        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
-
-        // Ustawienie kierunku chodzenia
-        animator.SetBool("IsWalkingBackwards", horizontalInput < 0);
-
-        // Ruch postaci
-        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
+            // Ruch postaci
+            transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if (horizontal != 0f && IsGrounded()) // Jeśli postać się porusza i jest na ziemi
         {
-            if (!isWalking) // Jeśli dźwięk kroków nie jest już odtwarzany
+            if (!isMoving) // Jeśli dźwięk kroków nie jest już odtwarzany
             {
                 footstepAudio.Play(); // Odtwórz dźwięk kroków
-                isWalking = true;
+                isMoving = true;
             }
         }
         else // Jeśli postać się nie porusza lub jest w powietrzu
         {
             footstepAudio.Stop(); // Zatrzymaj dźwięk kroków
-            isWalking = false;
+            isMoving = false;
         }
 
         if (IsGrounded())
@@ -104,7 +104,26 @@ public class PlayerMovement : MonoBehaviour
         isPressingS = Input.GetKey(KeyCode.S);
 
         Flip();
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("isWalkingBackwards", true);
+        }
+        else
+        {
+            animator.SetBool("isWalkingBackwards", false);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
     }
+    
 
     [System.Obsolete]
     void FixedUpdate()
