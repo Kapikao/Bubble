@@ -20,13 +20,18 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth / maxHealth);
     }
+
+    
+
     void Update()
     {
+        
         if (currentHealth <= 0)
         {
             Die();
         }
     }
+    
     private void Die()
     {
         Debug.Log("Gracz umarł! Resetowanie sceny...");

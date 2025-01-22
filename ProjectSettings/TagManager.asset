@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - Enemy
   - ENdOFMAP
+  - ghost
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: inne
+    uniqueID: 553537591
     locked: 0
   m_RenderingLayers:
   - Default
