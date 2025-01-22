@@ -108,9 +108,9 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
-  patrolSpeed: 2
-  detectionRange: 5
-  attackRange: 3
+  patrolSpeed: 2.5
+  detectionRange: 6
+  attackRange: 2.5
   damage: 25
   attackCooldown: 2
 --- !u!70 &7783734460512653128
