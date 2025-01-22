@@ -21,7 +21,14 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth / maxHealth);
     }
 
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("ghost"))
+        {
+            Die();
+        }
+    }
 
     void Update()
     {
