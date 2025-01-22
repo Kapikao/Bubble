@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Outofmap : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class Outofmap : MonoBehaviour
             {
                 // Odradzanie na pozycji (0,0,0)
                 other.transform.position = Vector3.zero;
+            }
+            else if (positionchose == 5)
+            {
+                SceneManager.LoadSceneAsync(9);
             }
             else
             {
