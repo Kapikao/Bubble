@@ -37,7 +37,7 @@ public class aTTACKAKT6 : MonoBehaviour
     {
         if (target)
         {
-            rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+            rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
         }
     }
 }
