@@ -6,11 +6,11 @@ public class RessetMenager : MonoBehaviour
     public int Sceneresetnum = 0;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-   public void resetlvl()
+    public void resetlvl()
     {
         if (Sceneresetnum == 3)
         {
@@ -20,11 +20,11 @@ public class RessetMenager : MonoBehaviour
         {
             SceneManager.LoadSceneAsync(7);
         }
-        else if(Sceneresetnum == 6)
+        else if (Sceneresetnum == 6)
         {
             SceneManager.LoadSceneAsync(9);
         }
-        
-        
+
+
     }
 }
