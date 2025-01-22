@@ -12007,6 +12007,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1493615077823984367, guid: 51bfa952ed1ad834c9ab1e268e7bfa6d, type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813237797758387092, guid: 51bfa952ed1ad834c9ab1e268e7bfa6d, type: 3}
+      propertyPath: moveSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5181793215018182667, guid: 51bfa952ed1ad834c9ab1e268e7bfa6d, type: 3}
       propertyPath: m_Name
       value: Duszki
@@ -12050,6 +12058,10 @@ PrefabInstance:
     - target: {fileID: 6453928807896302120, guid: 51bfa952ed1ad834c9ab1e268e7bfa6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075304682555789528, guid: 51bfa952ed1ad834c9ab1e268e7bfa6d, type: 3}
+      propertyPath: moveSpeed
+      value: 7.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
