@@ -1,7 +1,9 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
-public class cutsc1men : MonoBehaviour
+
+
+public class Cutsceenmenu : MonoBehaviour
 {
     public int count = 0;
     public GameObject sc1;
@@ -10,13 +12,13 @@ public class cutsc1men : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             count++;
         }
