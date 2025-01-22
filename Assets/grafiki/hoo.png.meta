@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 38d58e15691b5e3469bfe8e057c0a286
+guid: 9a554e98da6f5a744a4039872c696542
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4097046747152115015
-    second: akwakakaa_0
+      213: 479374021528058515
+    second: hoo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: akwakakaa_0
+      name: hoo_0
       rect:
         serializedVersion: 2
-        x: 348
-        y: 404
-        width: 329
-        height: 343
+        x: 339
+        y: 2
+        width: 3159
+        height: 3245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 745eb283f42abd830800000000000000
-      internalID: 4097046747152115015
+      spriteID: 39afabbf12417a600800000000000000
+      internalID: 479374021528058515
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      akwakakaa_0: 4097046747152115015
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
