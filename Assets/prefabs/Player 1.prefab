@@ -381,7 +381,7 @@ MonoBehaviour:
   coyoteTime: 0.2
   increasedGravity: 10
   normalGravity: 3
-  maxSpeed: 50
+  maxSpeed: 35
 --- !u!61 &3727035061091497006
 BoxCollider2D:
   m_ObjectHideFlags: 0
