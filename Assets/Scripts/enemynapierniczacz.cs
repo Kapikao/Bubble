@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyShooter : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class EnemyShooter : MonoBehaviour
     private Transform player;           // Referencja do gracza
 
     public int enemyHP = 3;             // Punkty zycia przeciwnika
+    public GameObject diesound;
 
     private bool isShooting = true;     // Czy przeciwnik aktualnie strzela
     private float shootingTimer = 10f;  // Licznik do przerwy w strzelaniu
@@ -94,6 +96,8 @@ public class EnemyShooter : MonoBehaviour
             {
                 Debug.Log("Enemy destroyed!");
                 Destroy(gameObject); // Zniszcz przeciwnika
+                SceneManager.LoadSceneAsync(12);
+                diesound.SetActive(true);
             }
         }
     }
