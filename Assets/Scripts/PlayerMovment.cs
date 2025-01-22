@@ -75,19 +75,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
             coyoteTimeCounter = 0f;
             canDoubleJump = true;  // Możemy wykonać podwójny skok po pierwszym skoku
         }
         else if (Input.GetButtonDown("Jump") && !IsGrounded() && canDoubleJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower); // Podwójny skok
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower); // Podwójny skok
             canDoubleJump = false;  // Tylko jeden podwójny skok
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTimer <= 0f)
@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isDashing)
         {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
         }
 
         // Ograniczenie maksymalnej całkowitej prędkości (wektorowej)
@@ -131,12 +131,12 @@ public class PlayerMovement : MonoBehaviour
     private void LimitVelocity()
     {
         // Oblicz aktualną całkowitą prędkość (moduł wektora prędkości)
-        float currentSpeed = rb.velocity.magnitude;
+        float currentSpeed = rb.linearVelocity.magnitude;
 
         if (currentSpeed > maxSpeed)
         {
             // Ogranicz prędkość, zachowując kierunek ruchu
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
     }
 
@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 0f;
 
         float dashDirection = isFacingRight ? 1f : -1f;
-        rb.velocity = new Vector2(dashDirection * dashSpeed, 0f);
+        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
 
         yield return new WaitForSeconds(dashDuration);
 
