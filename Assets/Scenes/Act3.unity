@@ -1357,6 +1357,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3587251304458447776, guid: d8c9fab2165f63d4c956aaaeef6c87a4, type: 3}
+      propertyPath: lvlnumber
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3834672014173577516, guid: d8c9fab2165f63d4c956aaaeef6c87a4, type: 3}
       propertyPath: m_Name
       value: brejma_0
