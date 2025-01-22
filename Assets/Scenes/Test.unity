@@ -3313,11 +3313,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1281835432454188261, guid: 8851863e7f7fc1845a25d5dd58810b91, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.18132
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1281835432454188261, guid: 8851863e7f7fc1845a25d5dd58810b91, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.18132
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1281835432454188261, guid: 8851863e7f7fc1845a25d5dd58810b91, type: 3}
       propertyPath: m_LocalScale.z
