@@ -224,7 +224,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1385091022171198404, guid: 742001adfbf16c54684e592fcb9e1b7c, type: 3}
   firePoint: {fileID: 694957738}
   fireRate: 1
-  enemyHP: 1
+  enemyHP: 3
   diesound: {fileID: 815439014}
 --- !u!61 &249654023
 BoxCollider2D:
