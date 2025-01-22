@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8378049348301165309}
   - component: {fileID: 3042670686095977932}
   - component: {fileID: 1716897485907555799}
+  - component: {fileID: 2905160050123419013}
   m_Layer: 0
   m_Name: badziewnik
   m_TagString: Untagged
@@ -102,4 +103,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   wanderRadius: 10
-  directionChangeSpeed: 1
+  directionChangeSpeed: 10
+--- !u!114 &2905160050123419013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436599482487743673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df99a3a6956b1f54cb9b6dbe4aa8f823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltSpeed: 10
